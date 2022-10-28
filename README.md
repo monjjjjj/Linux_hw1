@@ -38,6 +38,7 @@ asmlinkage int helloworld(void);
 ```c
 SYSCALL_DEFINE3(my_get_physical_addresses, unsigned long*, initial, unsigned long*, result, int , n)  
 ```
-initial = virtual address  
-result = physical address
+> initial = virtual address  
+> result = physical address
+> int = # of PA elements
 
