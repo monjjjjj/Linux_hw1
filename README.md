@@ -50,3 +50,10 @@ pa = (unsigned long*)kmalloc(sizeof(unsigned long)*n,GFP_KERNEL);
 >kmalloc is the normal method of allocating memory for objects smaller than page size in the kernel.  
 >GFP_KERNEL: Allocate normal kernel ram.
 
+
+### kfree
+```c
+void kfree(const void *objp)
+```
+
+objp：內存位址，通常是kmalloc( )函数的返回值，即是指向分配的內存區塊起始位址的位址指针  
