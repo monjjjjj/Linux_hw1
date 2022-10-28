@@ -35,4 +35,9 @@ asmlinkage int helloworld(void);
 
 ## Kernel Syscall
 ### 宣告
-                  SYSCALL_DEFINE3(my_get_physical_addresses, unsigned long*, initial, unsigned long*, result, int , n)
+```c
+SYSCALL_DEFINE3(my_get_physical_addresses, unsigned long*, initial, unsigned long*, result, int , n)  
+```
+initial = virtual address  
+result = physical address
+
