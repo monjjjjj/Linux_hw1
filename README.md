@@ -42,3 +42,11 @@ SYSCALL_DEFINE3(my_get_physical_addresses, unsigned long*, initial, unsigned lon
 > result = physical address  
 > int = # of PA elements
 
+### kmalloc
+```c
+va = (unsigned long*)kmalloc(sizeof(unsigned long)*n,GFP_KERNEL);
+pa = (unsigned long*)kmalloc(sizeof(unsigned long)*n,GFP_KERNEL); 
+```
+>kmalloc is the normal method of allocating memory for objects smaller than page size in the kernel.  
+>GFP_KERNEL: Allocate normal kernel ram.
+
