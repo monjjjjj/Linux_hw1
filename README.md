@@ -33,4 +33,6 @@ $ vim arch/x86/entry/syscalls/syscall_64.tbl
 $ vim include/linux/syscalls.h     
 asmlinkage int helloworld(void);  
 
-
+## Kernel Syscall
+### 宣告
+                  SYSCALL_DEFINE3(my_get_physical_addresses, unsigned long*, initial, unsigned long*, result, int , n)
