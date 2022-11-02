@@ -57,3 +57,6 @@ void kfree(const void *objp)
 ```
 
 objp：內存位址，通常是kmalloc( )函数的返回值，即是指向分配的內存區塊起始位址的位址指针  
+
+### PID of process都是一樣的?
+在kernel中，每個thread都有自己的ID，可以稱它為PID或者TID，而這些thread同時也有一個TGID(thread group ID)，第一個thread的PID會被當作TGID。
