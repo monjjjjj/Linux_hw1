@@ -63,3 +63,12 @@ void kfree(const void *objp)
 #include <dlfcn.h>
 ```
 >說明動態連結
+
+### thread
+```c
+pthread_create()
+pthread_join()
+```
+>透過 pthread_create () 建立 child thread 並指定其所要執行的函數，main thread 與 child thread 將會平行執行，  
+>在 main thread 中使用 pthread_join () 來等待 child thread 結束，若你不等待 child thread 結束， main thread 就直接結束的話， child thread 將無法成功執行完。
+
