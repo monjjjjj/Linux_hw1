@@ -67,6 +67,8 @@ void kfree(const void *objp)
 ### thread
 ```c
 pthread_create()
+```
+```c
 pthread_join()
 ```
 >透過 pthread_create () 建立 child thread 並指定其所要執行的函數，main thread 與 child thread 將會平行執行，  
