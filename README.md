@@ -61,6 +61,9 @@ void kfree(const void *objp)
 >在kernel中，每個thread都有自己的ID，可以稱它為PID或者TID，而這些thread同時也有一個TGID(thread group ID)，第一個thread的PID會被當作TGID。
 
 ### Thread
+>All threads belonging to the same process share code section, data section, and OS resources (e.g. open files and signals).  
+>But each thread has its own thread ID, program counter, register set, and a stack (會放在thread control block裡).  
+
 ```c
 pthread_create()
 ```
@@ -68,5 +71,5 @@ pthread_create()
 ```c
 pthread_join()
 ```
->在 main thread 中使用 pthread_join () 來等待 child thread 結束。
+>在 main thread 中使用 pthread_join () 來等待 child thread 結束。  
 >若沒有等待child thread 結束， main thread 就直接結束的話， child thread 將無法成功執行完。
